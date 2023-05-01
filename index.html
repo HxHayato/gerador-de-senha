@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senha</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="gerarSenha()">
+    <div class="container">
+        <div class="senha">
+            <input type="text" readonly class="txt-senha" value="Valor de teste">
+            <button class="copiar">
+                <i class='bx bx-copy'></i>
+            </button>
+        </div>
+        
+        
+        <div class="campo-range">
+            <input type="range" name="num-caracter" id="num-caracter" min="4" max="30" value="8">
+            <p class="txt-range">8</p>
+        </div>
+
+        <div class="check-row">
+            <input type="checkbox" name="letra-minusc" id="letra-minusc" checked class="check">
+            <label for="letra-minusc">Letras minúsculas</label>
+        </div>
+
+        <div class="check-row">
+            <input type="checkbox" name="letra-maiusc" id="letra-maiusc" checked class="check">
+            <label for="letra-maiusc">Letras maiúsculas</label>
+        </div>
+
+        <div class="check-row">
+            <input type="checkbox" name="numero" id="numero" checked class="check">
+            <label for="numero">Números</label>
+        </div>
+        
+        <div class="check-row">
+            <input type="checkbox" name="simbolo" id="simbolo" checked class="check">
+            <label for="simbolo">Símbolos</label>
+        </div>
+
+        <button class="gerar">
+            Gerar
+        </button>
+    </div>
+
+    <div class="confirmacao-copiar">Copiado com sucesso!</div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>

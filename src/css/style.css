@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-color: #f9f9f9;
+    --bg-container: #f9f9f9c6;
+    --txt-color: #212121;
+    --modal-color: #212121;
+    --princ-color: #8F43EE;
+    --princ-hover-color: #833ed6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+    background-color: var(--bg-container);
+    width: 350px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #80808090;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.senha {
+    padding: 0 8px ;
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--princ-color);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-senha {
+    color: var(--txt-color);
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.copiar {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.campo-range {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#num-caracter {
+    background-color: var(--princ-color);
+    width: 93%;
+    height: 10px;
+    border-radius: 25px;
+    accent-color: var(--princ-color);
+    border: var(--princ-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.txt-range {
+    color: var(--txt-color);
+    width: 7%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.check-row {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.check-row input[type="checkbox"]:checked {
+    display: block;
+    accent-color: var(--princ-color);
+    cursor: pointer;
+}
+
+.check-row label {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.gerar {
+    background-color: var(--princ-color);
+    color: #f9f9f9;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gerar:hover {
+    background-color: var(--princ-hover-color);
+}
+
+.confirmacao-copiar {
+    padding: 10px 1.5%;
+    background-color: var(--modal-color);
+    color: #fff;
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    display: none;
+    font-size: 1rem;
+    transition: all .40s ease-in-out;
+    animation: confirmarCopia 4s;
+}
+
+@keyframes confirmarCopia {
+    0% {
+        bottom: -100px;
+    }
+
+    33% {
+        bottom: 0;
+    }
+
+    66% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: -100px;
+    }
+}
+
+@media Screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        height: 80vh;
+    }
+}
